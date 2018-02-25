@@ -1,14 +1,11 @@
-var playlist = {Queen: "We are the champion", Orangerange: "Hana", Pornographity: "Saboten"};
+var playlist = {Porno: "Saboten"};
 
+function updatePlaylist (
+newObject, artistName, songTitle){
+  return Object.assign (newObject, {[artistName]: songTitle})
+}
 
-
-
-
-
-
-
-
-function updatePlaylist ({}, playlist, {artistName: songTitle}){
-  Object.assign (artistName, songTitle)
-  return 
+function removeFromPlaylist (anotherPlaylist, anotherArtistName){
+  delete anotherPlaylist[anotherArtistName];
+  return anotherPlaylist;
 }
